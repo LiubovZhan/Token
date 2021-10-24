@@ -1,0 +1,65 @@
+{
+	"ABI version": 2,
+	"version": "2.1",
+	"header": ["time", "expire"],
+	"functions": [
+		{
+			"name": "addHouse",
+			"inputs": [
+				{"name":"nameHouse","type":"string"},
+				{"name":"area","type":"uint256"},
+				{"name":"location","type":"string"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "getHouseOwner",
+			"inputs": [
+				{"name":"houseId","type":"uint256"}
+			],
+			"outputs": [
+				{"name":"value0","type":"uint256"}
+			]
+		},
+		{
+			"name": "getHouseInfo",
+			"inputs": [
+				{"name":"houseId","type":"uint256"}
+			],
+			"outputs": [
+				{"name":"nameHouse","type":"string"},
+				{"name":"area","type":"uint256"},
+				{"name":"location","type":"string"},
+				{"name":"sale","type":"string"}
+			]
+		},
+		{
+			"name": "forSale",
+			"inputs": [
+				{"name":"houseId","type":"uint256"},
+				{"name":"price","type":"uint256"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "constructor",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		}
+	],
+	"data": [
+	],
+	"events": [
+	],
+	"fields": [
+		{"name":"_pubkey","type":"uint256"},
+		{"name":"_timestamp","type":"uint64"},
+		{"name":"_constructorFlag","type":"bool"},
+		{"components":[{"name":"nameHouse","type":"string"},{"name":"area","type":"uint256"},{"name":"location","type":"string"},{"name":"price","type":"uint256"}],"name":"databaseHouse","type":"tuple[]"},
+		{"name":"houseToOwner","type":"map(uint256,uint256)"}
+	]
+}
